@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mauro Fuentes — Antelia · Perfil Profesional 2026</title>
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Mauro Fuentes — Antelia · Perfil Profesional">
+<meta property="og:description" content="Compositor, productor musical y director creativo. Más de dos décadas de trayectoria, colaboraciones en 6 países y una metodología propia: El Alquimista del Círculo Cromático.">
+<meta property="og:image" content="https://anteliaofficial.github.io/profile/og-image.jpg">
+<meta property="og:url" content="https://anteliaofficial.github.io/profile/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mauro Fuentes — Antelia · Perfil Profesional">
+<meta name="twitter:description" content="Compositor, productor musical y director creativo. Más de dos décadas de trayectoria, colaboraciones en 6 países y una metodología propia.">
+<meta name="twitter:image" content="https://anteliaofficial.github.io/profile/og-image.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Sora:wght@200;300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -44,6 +53,10 @@ section { padding:5.5rem 0; border-top:.5px solid var(--light); }
 .contact-item { font-size:11px; font-weight:200; letter-spacing:.12em; color:rgba(255,255,255,.5); }
 .contact-item strong { color:var(--magenta); font-weight:300; margin-right:.5rem; }
 .contact-item a { color:rgba(255,255,255,.5); text-decoration:none; }
+.summary-strip { display:flex; justify-content:center; gap:4.5rem; flex-wrap:wrap; padding:2.6rem 2rem; border-bottom:.5px solid var(--light); }
+.summary-item { text-align:center; }
+.summary-num { font-family:'Sora',sans-serif; font-weight:600; font-size:clamp(24px,3.2vw,34px); color:var(--magenta); line-height:1; margin-bottom:.5rem; }
+.summary-label { font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:#777; }
 
 /* PERFIL */
 .perfil-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
@@ -152,6 +165,17 @@ footer { padding:2.2rem 5rem; background:var(--black); display:flex; justify-con
   footer{flex-direction:column;text-align:center;}
   .footer-meta{text-align:center;}
 }
+
+@media print {
+  .hero { height:auto; min-height:0; display:block; padding:2rem 0; }
+  .hero-bg, .hero-ov, .hero-halo, .cierre-halo, .cierre-ov { display:none !important; }
+  .hero, .cierre, .contact-strip, footer { background:#fff !important; color:#000 !important; }
+  .hero-name, .hero-eyebrow, .hero-roles, .cierre-quote, .cierre-sub, .footer-brand, .contact-item, .contact-item a, .footer-meta { color:#000 !important; }
+  .cta-btn { border:1px solid #000 !important; background:none !important; color:#000 !important; }
+  a[href^="http"]:after, a[href^="mailto"]:after { content:" (" attr(href) ")"; font-size:8px; color:#555; font-weight:400; }
+  section, .respaldo-item, .esp-item, .form-block { break-inside:avoid; page-break-inside:avoid; }
+  .cierre { min-height:0; padding:2rem 0; }
+}
 </style>
 </head>
 <body>
@@ -189,6 +213,12 @@ footer { padding:2.2rem 5rem; background:var(--black); display:flex; justify-con
   <div class="contact-item"><strong>Correo</strong><a href="mailto:mauro.fuentes@outlook.com">mauro.fuentes@outlook.com</a></div>
   <div class="contact-item"><strong>Tel.</strong>+56 9 3051 3553</div>
   </div>
+
+<div class="summary-strip">
+  <div class="summary-item"><p class="summary-num">+20</p><p class="summary-label">Años de trayectoria</p></div>
+  <div class="summary-item"><p class="summary-num">Cientos</p><p class="summary-label">Presentaciones en vivo</p></div>
+  <div class="summary-item"><p class="summary-num">6</p><p class="summary-label">Países de colaboración</p></div>
+</div>
 
 <section>
   <div class="container">
